@@ -1,7 +1,8 @@
 const {
   app,
   BrowserWindow,
-  ipcMain
+  ipcMain,
+  dialog
 } = require('electron')
 
 // 创建一个类,用来简化创建窗口
@@ -50,5 +51,16 @@ app.on('ready', () => {
       parent: mainWindow
     }, './renderer/add.html')
     // event.sender.send('reply', 'hell world!')
+  })
+  ipcMain.on('open-music-file', () => {
+    dialog.showOpenDialog({
+      properties: ['openFile', 'multiSelections'],
+      filters: [{
+        name: 'Music',
+        extensions: ['mp3']
+      }]
+    }, files => {
+      console.log(files)
+    })
   })
 })

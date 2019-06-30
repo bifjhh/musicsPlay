@@ -17,3 +17,10 @@
 - 设置默认配置,减少重复的代码工作
 - 合并config,适配自定义参数传递
 - 通过 `this.once('ready-to-show',()=>{this.show()})`解决闪烁问题
+
+### 使用Dialog模块添加音乐文件
+- 封装获取DOM元素方法
+- 引入dialog模块并在showOpenDialog中配置
+  - 在properties配置可选项
+  - 在filters配置可以选择的文件
+  - 通过回调函数接收参数
