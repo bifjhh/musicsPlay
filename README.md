@@ -6,4 +6,6 @@
 ### 创建目录结构
 - 创建renderer文件夹,用来存放渲染的界面(HTML)和js文件
 
+### 完成首页样式
+- 在index.html 引入bootstrap的css文件
 
