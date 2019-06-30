@@ -17,8 +17,18 @@ app.on('ready', () => {
    * @name {String} 方法名称
    * @content {*} 传递过来的数据
    */
-  // ipcMain.on('message', (event, arg) => {
-  //   console.log(arg);
-  //   event.sender.send('reply', 'hell world!')
-  // })
+  ipcMain.on('add-music-window', () => {
+    // console.log('hello from index page');
+    // 接收到数据之后创建新的窗口
+    const addWindow = new BrowserWindow({
+      width:500,
+      height:400,
+      webPreferences:{
+        nodeIntegration:true
+      },
+      parent:mainWindow
+    })
+    addWindow.loadFile('./renderer/add.html')
+    // event.sender.send('reply', 'hell world!')
+  })
 })

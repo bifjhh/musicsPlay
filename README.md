@@ -9,3 +9,6 @@
 ### 完成首页样式
 - 在index.html 引入bootstrap的css文件
 
+### 创建添加音乐窗口
+- 通过ipc来检测通信,收到通信后在main.js内创建选择音乐窗口
+
