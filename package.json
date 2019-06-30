@@ -4,7 +4,7 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "dev": "nodemon --wacth main.js --exec 'electron .'"
+    "dev": "nodemon --wacth renderer/*.* --exec 'electron .'"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
